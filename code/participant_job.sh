@@ -19,7 +19,7 @@ sesid="$4"
 # change into the cluster-assigned temp directory. Not done by default in SGE
 cd ${CBICA_TMPDIR}
 # OR Run it on a shared network drive
-# cd /cbica/comp_space/$(basename $HOME)
+#cd /cbica/comp_space/$(basename $HOME)
 
 # Used for the branch names and the temp dir
 BRANCH="job-${JOB_ID}-${subid}-${sesid}"
@@ -71,9 +71,9 @@ then
       -i inputs/data/*json \
       -i pennlinc-containers/.datalad/environments/cpac-1-8-5/image \
       --explicit \
-      -o ${subid}_${sesid}_c-pac-1.8.5.zip \
+      -o cpac_RBCv0/${subid} \
       -m "C-PAC:1.8.5 ${subid} ${sesid}" \
-      "bash ./code/c-pac_zip.sh ${subid} ${sesid}"
+      "bash ./code/c-pac_unzipped.sh ${subid} ${sesid}"
 # -------------------------------------------------------------------
 else
   datalad run \
@@ -82,9 +82,9 @@ else
       -i inputs/data/*json \
       -i pennlinc-containers/.datalad/environments/cpac-1-8-5/image \
       --explicit \
-      -o ${subid}_${sesid}_c-pac-1.8.5.zip \
+      -o cpac_RBCv0/${subid} \
       -m "C-PAC:1.8.5 ${subid}" \
-      "bash ./code/c-pac_zip.sh ${subid}"
+      "bash ./code/c-pac_unzipped.sh ${subid}"
 fi
 
 # file content first -- does not need a lock, no interaction with Git
@@ -97,6 +97,7 @@ echo TMPDIR TO DELETE
 echo ${BRANCH}
 
 datalad uninstall -r --nocheck --if-dirty ignore inputs/data
+datalad save 
 datalad drop -r . --nocheck
 git annex dead here
 cd ../..
