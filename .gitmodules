@@ -1,0 +1,5 @@
+[submodule "inputs/data"]
+	path = inputs/data
+	url = /cbica/projects/RBC/RBC_RAWDATA/bidsdatasets/HBN
+	datalad-id = b32508c1-d2c1-4b40-a3e3-48df49e7fa56
+	datalad-url = /cbica/projects/RBC/RBC_RAWDATA/bidsdatasets/HBN
