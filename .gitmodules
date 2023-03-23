@@ -3,3 +3,8 @@
 	url = /cbica/projects/RBC/RBC_RAWDATA/bidsdatasets/HBN
 	datalad-id = b32508c1-d2c1-4b40-a3e3-48df49e7fa56
 	datalad-url = /cbica/projects/RBC/RBC_RAWDATA/bidsdatasets/HBN
+[submodule "pennlinc-containers"]
+	path = pennlinc-containers
+	url = /cbica/projects/RBC/production/HBN/c-pac-1.8.5/pennlinc-containers
+	datalad-id = 3da1ec06-8c97-478d-a260-b6ac7ddff650
+	datalad-url = /cbica/projects/RBC/production/HBN/c-pac-1.8.5/pennlinc-containers
