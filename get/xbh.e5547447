@@ -1,6 +1,0 @@
-/var/tmp/gridengine/8.1.9-1/default/spool/2118ffn010/job_scripts/5547447: line 1: n-1_desc-FDJenkinson_motion.1D: command not found
-[ERROR] InsufficientArgumentsError(Neither dataset nor target path(s) provided) (InsufficientArgumentsError) 
-usage: datalad get [-h] [-s LABEL] [-d PATH] [-r] [-R LEVELS] [-n]
-                   [-D DESCRIPTION] [--reckless [auto|ephemeral|shared-...]]
-                   [-J NJOBS] [--version]
-                   [PATH ...]
