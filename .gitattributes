@@ -2,3 +2,5 @@
 **/.git* annex.largefiles=nothing
 CHANGELOG.md annex.largefiles=nothing
 README.md annex.largefiles=nothing
+cpac_RBCv0/*.tsv annex.largefiles=nothing
+cpac_RBCv0/*.tsv annex.largefiles=nothing
